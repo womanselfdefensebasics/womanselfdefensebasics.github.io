@@ -8,153 +8,281 @@
 	<head>
 		<title>Women's Self-Defense</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		
 		<style>
-			/* Override Miniport base defaults that push content off screen */
-			html, body {
-				margin: 0;
-				padding: 0;
-				background-color: #ffffff;
-				color: #333333;
-			}
-			body {
-				padding-top: 65px;
-			}
-
-			/* Remove oval/circle avatar masking everywhere */
-			#top .image,
-			.image,
-			.image img,
-			.content-block img {
+			/* Override Miniport's default circular avatar masking for all images */
+			.image.fit img, .image img, img {
 				border-radius: 0 !important;
 				box-shadow: none !important;
 			}
-
-			/* Google Sites style dark top navigation bar */
-			#nav {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 60px;
-				background-color: #212121 !important;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding: 0 2rem;
-				z-index: 10000;
-				box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-			}
-			#nav .site-logo {
-				font-size: 1.35rem;
-				font-weight: 300;
-				color: #ffffff;
-				letter-spacing: 0.5px;
-				white-space: nowrap;
-			}
-			#nav ul {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				display: flex;
-				align-items: center;
-				gap: 1.5rem;
-			}
-			#nav ul li {
-				margin: 0;
-				padding: 0;
-			}
-			#nav ul li a {
-				color: #c2c2c2 !important;
-				text-decoration: none;
-				font-size: 0.88rem;
-				font-weight: 400;
-				padding: 6px 4px;
-				transition: color 0.2s ease;
-			}
-			#nav ul li a:hover {
-				color: #ffffff !important;
-			}
-			#nav ul li a.active {
-				color: #4da3d4 !important;
-			}
-
-			/* Sections & layout */
-			article {
-				scroll-margin-top: 65px;
-				position: relative;
-			}
-
-			.content-block {
-				max-width: 900px;
-				margin: 0 auto;
-				padding: 2.5rem 1.5rem;
+			/* Left-align text inside the content boxes for readability */
+			.content-box {
 				text-align: left;
+				padding: 2.5em 2em;
 			}
-
-			.content-block h2 {
-				text-align: center;
-				font-size: 2.2rem;
-				font-weight: 300;
-				color: #3b7494;
-				margin-bottom: 1.5rem;
+			.content-box h3 {
+				margin-top: 1.5em;
+				color: #333;
 			}
-
-			.content-block h3 {
-				font-size: 1.3rem;
-				font-weight: 600;
-				color: #222222;
-				margin-top: 1.8rem;
-				margin-bottom: 0.5rem;
+			.content-box ul, .content-box ol {
+				margin-left: 2em;
+				margin-bottom: 1.5em;
 			}
-
-			.content-block p, 
-			.content-block li {
-				font-size: 1.05rem;
-				line-height: 1.75;
-				color: #444444;
+			.figure-caption {
+				text-align: center; 
+				font-style: italic; 
+				font-size: 0.9em; 
+				color: #666; 
+				margin-top: 0.8em; 
+				margin-bottom: 2em;
 			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-			.content-block ul, 
-			.content-block ol {
-				margin: 1rem 0 2rem 1.8rem;
-			}
+		<!-- Navigation (Using native Miniport structure) -->
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="#top">Home</a></li>
+				<li><a href="#awareness">Awareness</a></li>
+				<li><a href="#targets">Targets</a></li>
+				<li><a href="#stance">Stance</a></li>
+				<li><a href="#frontkick">Front Kick</a></li>
+				<li><a href="#kneestrike">Knee Strike</a></li>
+				<li><a href="#eyestrikes">Eye Strikes</a></li>
+			</ul>
+		</nav>
 
-			.section-pic {
-				display: block;
-				margin: 1rem auto;
-				max-width: 100%;
-				height: auto;
-			}
+		<!-- Home / Hero Section -->
+		<article id="top" class="wrapper style1">
+			<div class="container">
+				<header>
+					<h1>Women's <strong>Self-Defense</strong></h1>
+				</header>
+				
+				<div class="row aln-center">
+					<div class="col-12">
+						<!-- Custom container for image with text overlay -->
+						<div style="position: relative; max-width: 1000px; margin: 0 auto;">
+							<img src="images/various-self-defense-techniques.png" alt="Self Defense Techniques" style="width: 100%; height: auto; display: block;" />
+							
+							<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #1e4a24; font-size: clamp(1.8rem, 4vw, 3.8rem); font-weight: 800; width: 100%; text-shadow: 2px 2px 10px rgba(255,255,255,0.9), -2px -2px 10px rgba(255,255,255,0.9);">
+								Basic Self-Defense<br>
+								Techniques for Women<br>
+								Featuring Jarrett<br>
+								Arthur
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row aln-center" style="margin-top: 2em;">
+					<div class="col-10">
+						<p style="font-size: 0.9em; color: #555; text-align: center;">
+							These techniques are demonstrated by Self-Defense Expert and Krav Maga Black Belt Jarrett Arthur (founder of M.A.M.A - Mothers Against Malicious Acts, founder of Jarrett Arthur Customized Self-Defense and co-founder of Jarrett and Jennie Self-Defense).
+						</p>
+					</div>
+				</div>
+			</div>
+		</article>
 
-			.pic-caption {
-				font-size: 0.88rem;
-				font-style: italic;
-				color: #666;
-				text-align: center;
-				margin-top: 0.4rem;
-				margin-bottom: 2rem;
-			}
+		<!-- Situational Awareness -->
+		<article id="awareness" class="wrapper style2">
+			<div class="container">
+				<header>
+					<h2>Situational Awareness</h2>
+				</header>
+				<div class="row aln-center">
+					<div class="col-11">
+						<section class="box style1 content-box">
+							<img src="images/jarrett-arthur.png" alt="Jarrett Arthur" style="max-width: 400px; display: block; margin: 0 auto;">
+							<p class="figure-caption">Figure 1: A portrait of Self-Defense Expert Jarrett Arthur. She is smiling and her blonde hair is neatly tied back in a ponytail.</p>
+							
+							<p>Self Defense expert Jarrett Arthur (founder of M.A.M.A - Mothers Against Malicious Acts, founder of Jarrett Arthur Customized Self-Defense and co-founder of Jarrett and Jennie Self-Defense), shared some incredibly useful information regarding prevention. Afterall, fighting is the last resort.</p>
+							<p>“Learning self-defense will make you fearful of life and paranoid.” FALSE. Completely, absolutely, and unequivocally false. While that’s a common misconception held by women, the reality is that learning how to defend yourself, and learning how to exist in the world in a safer way, leads to feeling less fearful. You have the confidence and knowledge to take care of yourself when the shit hits the fan.</p>
+							<p>I think of self-defense as a spectrum consisting of 3 distinct categories: pre-fight (awareness, avoidance, prevention, de-escalation), fight (movement, striking, blocking, defending), and post-fight (legal, psychological, emotional). By far, the most important category is pre-fight. If you can avoid being in a physical fight for your life that’s what you want to do, by any means necessary.</p>
+							
+							<h3>Prevention:</h3>
+							<ul>
+								<li>Choose parking spots that are as close to entrances as possible.</li>
+								<li>Park under or near lighting fixtures in a lot or garage.</li>
+								<li>If you have access to a doorman or security guard, utilize them as an escort.</li>
+								<li>Have your keys out and in hand before you even leave your home/office/store.</li>
+								<li>Familiarize yourself with the panic feature on your key remote.</li>
+							</ul>
 
-			/* Hero section layout */
-			.hero-container {
-				position: relative;
-				width: 100%;
-				max-width: 1200px;
-				margin: 1.5rem auto 0 auto;
-				text-align: center;
-			}
+							<h3>Awareness:</h3>
+							<ul>
+								<li>As you enter the lot or garage identify possible hiding spots that may harbor a criminal.</li>
+								<li>Get off your cell phones! Take out your bluetooth or earbuds so you can hear better.</li>
+								<li>Look around you frequently, including behind you.</li>
+								<li>Don’t carry too much stuff. It’s a good idea to keep one hand free for opening the door, and for striking quickly if need be.</li>
+								<li>If you’re by yourself, only unlock the driver side door.</li>
+								<li>Approach your vehicle to the center of the front or back bumper to check both sides.</li>
+								<li>Get into your car quickly, shut the door right away, and lock the doors immediately. Don't idle.</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		</article>
 
-			.hero-container img {
-				width: 100%;
-				height: auto;
-				display: block;
-			}
+		<!-- Vulnerable Targets -->
+		<article id="targets" class="wrapper style3">
+			<div class="container">
+				<header>
+					<h2>Vulnerable Targets</h2>
+				</header>
+				<div class="row aln-center">
+					<div class="col-11">
+						<section class="box style1 content-box">
+							<img src="images/vitals-self-defense.jpg" alt="Vulnerable Targets" style="max-width: 600px; width: 100%; display: block; margin: 0 auto 2em auto;">
+							
+							<p>Women often face a size and strength disadvantage against men. To level the playing field more, women must take any advantage they can get.</p>
+							
+							<h3>1. Groin</h3>
+							<p>Balls. Testicles. Nuts. Family Jewels. Nards. Cojones. Huevos. Ok, now that I have your attention, you can probably guess what we are about to discuss. It doesn’t matter what slang or anatomical name you choose to call it, a man’s balls presents a significant weakness that can be exploited in self-defense. Intentional strikes to the groin are against the rules in every single competitive sport on the planet, and for good reason. But it’s the actions that are against the rules in sport, that should be considered best practices for the street.</p>
+							<p>While it is possible to do permanent damage if you deliver a solid kick to the groin, the reality is that men get accidentally hit in the balls all the time without suffering permanent damage. Moreover, it should not be the intention of the defender to permanently damage the groin, but instead to deliver an aggressive, powerful kick to the groin that inflicts enough pain to stop, stun, or slow an attacker long enough to allow for time to escape.</p>
 
-			.hero-text-overlay {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-
+							<h3>2. Eyes</h3>
+							<p>If your attacker can't see you, he can't attack you. Attacks to the eyes hurt a lot and can provide ample time for escape.</p>
+						</section>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<!-- Fighting Stance -->
+		<article id="stance" class="wrapper style2">
+			<div class="container">
+				<header>
+					<h2>Fighting Stance</h2>
+				</header>
+				<div class="row aln-center">
+					<div class="col-11">
+						<section class="box style1 content-box">
+							<img src="images/jarrett-arthur-fighting-stance.png" alt="Fighting Stance" style="max-width: 300px; display: block; margin: 0 auto;">
+							<p class="figure-caption">Figure 1: Self-Defense Expert Jarrett Arthur demonstrates a highly practical self-defense oriented fighting stance.</p>
+							
+							<p>To set up a strong ready stance for self-defense, stand with your strong leg stepped back to give yourself a solid base. Keep a slight bend in your knees and stay on the ball of your back foot so you can react, move, or strike quickly. Bring your hands up to shield your face with your palms facing out, tucking your chin and lifting your shoulders slightly to protect your neck and jaw.</p>
+							<p>This posture keeps you balanced on your feet, helps you generate power behind strikes, and leaves you in a clear position to create distance or run away.</p>
+						</section>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<!-- Front Kick to the Groin -->
+		<article id="frontkick" class="wrapper style3">
+			<div class="container">
+				<header>
+					<h2>Front Kick to the Groin</h2>
+				</header>
+				<div class="row aln-center">
+					<div class="col-11">
+						<section class="box style1 content-box">
+							<img src="images/jarrett-arthur-front-kick-to-the-groin.png" alt="Front Kick" style="max-width: 300px; display: block; margin: 0 auto;">
+							<p class="figure-caption">Figure 1: Self-Defense Expert Jarrett Arthur delivers a front kick to an attacker's groin.</p>
+							
+							<p>The front kick to the groin is the longest ranged attack you can deliver and it's also one of the most effective. Here's Self-Defense Expert Jarrett Arthur's walk through on how to perform this move. Fun fact: Front kick to the groin is Jarrett Arthur's favorite technique.</p>
+							
+							<ol>
+								<li><strong>The Starting Stance:</strong> Never stand with your feet together in an aggressive situation. Keep your feet apart with your chest up to maintain a strong, stable, and ready posture. Step your dominant leg back (right leg back if you are right-handed, left leg back if you are left-handed). Keep your hands up protecting your face and your chin tucked.</li>
+								<li><strong>Making Contact:</strong> You want to make contact with your shin bone—anywhere from the bottom of your kneecap down to your instep (where you tie your shoelaces).</li>
+								<li><strong>The Two Core Steps:</strong>
+									<ul>
+										<li><em>The Knee Drive:</em> This is the most crucial part for generating power. You must drive your knee higher than the height of the target. If your knee stays at or below the target, the kick will just feel like a weak slap.</li>
+										<li><em>The Whip/Flick:</em> As your knee travels upward, flick your foot out as if you are trying to kick something nasty off the top of your sneaker.</li>
+									</ul>
+								</li>
+								<li><strong>Power Generation:</strong> Drive from the ground by pushing off with your back foot. Don't rotate your hips: Drive your hips forward and up into the strike rather than leaning backward, which would compromise your balance.</li>
+							</ol>
+						</section>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<!-- Knee to the Groin -->
+		<article id="kneestrike" class="wrapper style2">
+			<div class="container">
+				<header>
+					<h2>Knee to the Groin</h2>
+				</header>
+				<div class="row aln-center">
+					<div class="col-11">
+						<section class="box style1 content-box">
+							<img src="images/jarrett-arthur-knee-to-the-groin.png" alt="Knee Strike" style="max-width: 300px; display: block; margin: 0 auto;">
+							<p class="figure-caption">Figure 1: Self Defense Expert Jarrett Arthur knees an attacker in the balls.</p>
+							
+							<p>Jarrett Arthur breaks down how to perform a knee strike through the following key mechanics and guidelines:</p>
+							
+							<h3>Technique & Execution</h3>
+							<ul>
+								<li><strong>Form a Sharp Striking Surface:</strong> Bring your heel directly back toward your butt. Folding the leg tightly makes the knee joint as sharp and compact a point of impact as possible.</li>
+								<li><strong>Drive Forward with Body Weight:</strong> Push off and drive forward from your back foot, sending the knee up and through the target while carrying your overall body weight forward.</li>
+								<li><strong>Control the Opponent:</strong> If within grabbing distance, reach and pull the attacker down toward your strike as your body weight drives forward into them.</li>
+								<li><strong>Immediate Recoil:</strong> Keep the motion rapid and immediately snap the foot back down into your stance rather than leaving the leg hanging forward.</li>
+							</ul>
+
+							<h3>Critical Mistakes to Avoid</h3>
+							<ul>
+								<li><strong>Leaving the Knee Exposed:</strong> Avoid moving slowly or leaving your leg extended against the opponent, as they can catch the knee and take you to the ground.</li>
+								<li><strong>Leaning Backward:</strong> Leaning back compromises your balance, reduces striking power, and can cause you to fall backward with the attacker landing directly on top of you.</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<!-- Eye Strikes -->
+		<article id="eyestrikes" class="wrapper style3">
+			<div class="container">
+				<header>
+					<h2>Eye Strikes</h2>
+				</header>
+				<div class="row aln-center">
+					<div class="col-11">
+						<section class="box style1 content-box">
+							<img src="images/eye-gouge-strike.jpg" alt="Eye Strike" style="max-width: 300px; display: block; margin: 0 auto;">
+							<p class="figure-caption">Figure 1: Self-Defense Expert Jarrett Arthur demonstrates a front-bear hug escape by attacking the eyes of the assailant.</p>
+							
+							<p>If your attacker can't see you, then he can't attack you. This is why eye strikes work so well. Self-Defense Expert Jarrett Arthur explains how to deliver an eye-strike.</p>
+							<p>The most effective way to strike to the eyes is by connecting your fingers and your thumbs together to make a really strong point from here I could send one or the other or I could send both strikes right to the eyes. If you are really close to him, you can also stick your thumbs into his eyes.</p>
+						</section>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<!-- Footer -->
+		<article id="footer" class="wrapper style4">
+			<div class="container">
+				<div class="row aln-center">
+					<div class="col-11">
+						<p style="font-size: 0.9em; color: #888; font-style: italic; text-align: left;">
+							Jarrett Arthur is one of the highest ranking female black instructors in Krav Maga in the country. For over 10 years she’s been educating and instructing men, women, and kids about the importance of practical, effective self-defense and personal safety knowledge. In 2009 she founded M.A.M.A. (Mothers Against Malicious Acts), a self-defense system designed exclusively for moms and all people responsible for the wellbeing of children. Jarrett has been featured as an expert on national television shows including Good Morning America, Ellen, Access Hollywood KCAL9, and Good Day LA, as well as in numerous online and print publications including SHAPE, Parents, Livestrong, Fitness Magazine and The New York Times.
+						</p>
+					</div>
+				</div>
+				<footer>
+					<ul id="copyright">
+						<li>&copy; Women's Self-Defense. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+			</div>
+		</article>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
