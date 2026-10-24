@@ -12,37 +12,55 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 		
 		<style>
+			/* Override Miniport's top padding to remove the huge gap */
+			#top {
+				padding-top: 3em !important;
+				padding-bottom: 2em !important;
+			}
+			
 			/* Override Miniport's default circular avatar masking for all images */
 			.image.fit img, .image img, img {
 				border-radius: 0 !important;
 				box-shadow: none !important;
 			}
-			/* Left-align text inside the content boxes for readability */
+
+			/* Widen the content box and darken the text */
 			.content-box {
 				text-align: left;
-				padding: 2.5em 2em;
+				padding: 3em 3.5em;
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+			.content-box p, .content-box li {
+				color: #222222 !important; /* Much darker text */
+				font-size: 1.15em;
+				line-height: 1.8;
 			}
 			.content-box h3 {
 				margin-top: 1.5em;
-				color: #333;
+				color: #111111 !important;
+				font-weight: 700;
+				font-size: 1.4em;
 			}
 			.content-box ul, .content-box ol {
 				margin-left: 2em;
 				margin-bottom: 1.5em;
 			}
+			
+			/* Image Captions */
 			.figure-caption {
 				text-align: center; 
 				font-style: italic; 
-				font-size: 0.9em; 
-				color: #666; 
-				margin-top: 0.8em; 
-				margin-bottom: 2em;
+				font-size: 1em; 
+				color: #555 !important; 
+				margin-top: 1em; 
+				margin-bottom: 2.5em;
 			}
 		</style>
 	</head>
 	<body class="is-preload">
 
-		<!-- Navigation (Using native Miniport structure) -->
+		<!-- Navigation -->
 		<nav id="nav">
 			<ul class="container">
 				<li><a href="#top">Home</a></li>
@@ -58,29 +76,22 @@
 		<!-- Home / Hero Section -->
 		<article id="top" class="wrapper style1">
 			<div class="container">
-				<header>
-					<h1>Women's <strong>Self-Defense</strong></h1>
+				<header style="margin-bottom: 1.5em;">
+					<h1 style="color: #111;">Women's <strong>Self-Defense</strong></h1>
+					<p style="font-size: 1.6em; font-weight: 700; color: #1e4a24; margin-top: 0.5em;">Basic Self-Defense Techniques for Women Featuring Jarrett Arthur</p>
 				</header>
 				
 				<div class="row aln-center">
 					<div class="col-12">
-						<!-- Custom container for image with text overlay -->
-						<div style="position: relative; max-width: 1000px; margin: 0 auto;">
+						<div style="max-width: 1200px; margin: 0 auto;">
 							<img src="images/various-self-defense-techniques.png" alt="Self Defense Techniques" style="width: 100%; height: auto; display: block;" />
-							
-							<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #1e4a24; font-size: clamp(1.8rem, 4vw, 3.8rem); font-weight: 800; width: 100%; text-shadow: 2px 2px 10px rgba(255,255,255,0.9), -2px -2px 10px rgba(255,255,255,0.9);">
-								Basic Self-Defense<br>
-								Techniques for Women<br>
-								Featuring Jarrett<br>
-								Arthur
-							</div>
 						</div>
 					</div>
 				</div>
 				
 				<div class="row aln-center" style="margin-top: 2em;">
-					<div class="col-10">
-						<p style="font-size: 0.9em; color: #555; text-align: center;">
+					<div class="col-12">
+						<p style="font-size: 1.05em; color: #444; text-align: center; max-width: 1000px; margin: 0 auto;">
 							These techniques are demonstrated by Self-Defense Expert and Krav Maga Black Belt Jarrett Arthur (founder of M.A.M.A - Mothers Against Malicious Acts, founder of Jarrett Arthur Customized Self-Defense and co-founder of Jarrett and Jennie Self-Defense).
 						</p>
 					</div>
@@ -92,12 +103,12 @@
 		<article id="awareness" class="wrapper style2">
 			<div class="container">
 				<header>
-					<h2>Situational Awareness</h2>
+					<h2 style="color: #111;">Situational Awareness</h2>
 				</header>
 				<div class="row aln-center">
-					<div class="col-11">
+					<div class="col-12">
 						<section class="box style1 content-box">
-							<img src="images/jarrett-arthur.png" alt="Jarrett Arthur" style="max-width: 400px; display: block; margin: 0 auto;">
+							<img src="images/jarrett-arthur.png" alt="Jarrett Arthur" style="max-width: 500px; width: 100%; display: block; margin: 0 auto;">
 							<p class="figure-caption">Figure 1: A portrait of Self-Defense Expert Jarrett Arthur. She is smiling and her blonde hair is neatly tied back in a ponytail.</p>
 							
 							<p>Self Defense expert Jarrett Arthur (founder of M.A.M.A - Mothers Against Malicious Acts, founder of Jarrett Arthur Customized Self-Defense and co-founder of Jarrett and Jennie Self-Defense), shared some incredibly useful information regarding prevention. Afterall, fighting is the last resort.</p>
@@ -133,12 +144,12 @@
 		<article id="targets" class="wrapper style3">
 			<div class="container">
 				<header>
-					<h2>Vulnerable Targets</h2>
+					<h2 style="color: #111;">Vulnerable Targets</h2>
 				</header>
 				<div class="row aln-center">
-					<div class="col-11">
+					<div class="col-12">
 						<section class="box style1 content-box">
-							<img src="images/vitals-self-defense.jpg" alt="Vulnerable Targets" style="max-width: 600px; width: 100%; display: block; margin: 0 auto 2em auto;">
+							<img src="images/vitals-self-defense.jpg" alt="Vulnerable Targets" style="max-width: 800px; width: 100%; display: block; margin: 0 auto 2em auto;">
 							
 							<p>Women often face a size and strength disadvantage against men. To level the playing field more, women must take any advantage they can get.</p>
 							
@@ -158,12 +169,12 @@
 		<article id="stance" class="wrapper style2">
 			<div class="container">
 				<header>
-					<h2>Fighting Stance</h2>
+					<h2 style="color: #111;">Fighting Stance</h2>
 				</header>
 				<div class="row aln-center">
-					<div class="col-11">
+					<div class="col-12">
 						<section class="box style1 content-box">
-							<img src="images/jarrett-arthur-fighting-stance.png" alt="Fighting Stance" style="max-width: 300px; display: block; margin: 0 auto;">
+							<img src="images/jarrett-arthur-fighting-stance.png" alt="Fighting Stance" style="max-width: 450px; width: 100%; display: block; margin: 0 auto;">
 							<p class="figure-caption">Figure 1: Self-Defense Expert Jarrett Arthur demonstrates a highly practical self-defense oriented fighting stance.</p>
 							
 							<p>To set up a strong ready stance for self-defense, stand with your strong leg stepped back to give yourself a solid base. Keep a slight bend in your knees and stay on the ball of your back foot so you can react, move, or strike quickly. Bring your hands up to shield your face with your palms facing out, tucking your chin and lifting your shoulders slightly to protect your neck and jaw.</p>
@@ -178,12 +189,12 @@
 		<article id="frontkick" class="wrapper style3">
 			<div class="container">
 				<header>
-					<h2>Front Kick to the Groin</h2>
+					<h2 style="color: #111;">Front Kick to the Groin</h2>
 				</header>
 				<div class="row aln-center">
-					<div class="col-11">
+					<div class="col-12">
 						<section class="box style1 content-box">
-							<img src="images/jarrett-arthur-front-kick-to-the-groin.png" alt="Front Kick" style="max-width: 300px; display: block; margin: 0 auto;">
+							<img src="images/jarrett-arthur-front-kick-to-the-groin.png" alt="Front Kick" style="max-width: 450px; width: 100%; display: block; margin: 0 auto;">
 							<p class="figure-caption">Figure 1: Self-Defense Expert Jarrett Arthur delivers a front kick to an attacker's groin.</p>
 							
 							<p>The front kick to the groin is the longest ranged attack you can deliver and it's also one of the most effective. Here's Self-Defense Expert Jarrett Arthur's walk through on how to perform this move. Fun fact: Front kick to the groin is Jarrett Arthur's favorite technique.</p>
@@ -209,12 +220,12 @@
 		<article id="kneestrike" class="wrapper style2">
 			<div class="container">
 				<header>
-					<h2>Knee to the Groin</h2>
+					<h2 style="color: #111;">Knee to the Groin</h2>
 				</header>
 				<div class="row aln-center">
-					<div class="col-11">
+					<div class="col-12">
 						<section class="box style1 content-box">
-							<img src="images/jarrett-arthur-knee-to-the-groin.png" alt="Knee Strike" style="max-width: 300px; display: block; margin: 0 auto;">
+							<img src="images/jarrett-arthur-knee-to-the-groin.png" alt="Knee Strike" style="max-width: 450px; width: 100%; display: block; margin: 0 auto;">
 							<p class="figure-caption">Figure 1: Self Defense Expert Jarrett Arthur knees an attacker in the balls.</p>
 							
 							<p>Jarrett Arthur breaks down how to perform a knee strike through the following key mechanics and guidelines:</p>
@@ -242,12 +253,12 @@
 		<article id="eyestrikes" class="wrapper style3">
 			<div class="container">
 				<header>
-					<h2>Eye Strikes</h2>
+					<h2 style="color: #111;">Eye Strikes</h2>
 				</header>
 				<div class="row aln-center">
-					<div class="col-11">
+					<div class="col-12">
 						<section class="box style1 content-box">
-							<img src="images/eye-gouge-strike.jpg" alt="Eye Strike" style="max-width: 300px; display: block; margin: 0 auto;">
+							<img src="images/eye-gouge-strike.jpg" alt="Eye Strike" style="max-width: 450px; width: 100%; display: block; margin: 0 auto;">
 							<p class="figure-caption">Figure 1: Self-Defense Expert Jarrett Arthur demonstrates a front-bear hug escape by attacking the eyes of the assailant.</p>
 							
 							<p>If your attacker can't see you, then he can't attack you. This is why eye strikes work so well. Self-Defense Expert Jarrett Arthur explains how to deliver an eye-strike.</p>
@@ -262,13 +273,13 @@
 		<article id="footer" class="wrapper style4">
 			<div class="container">
 				<div class="row aln-center">
-					<div class="col-11">
-						<p style="font-size: 0.9em; color: #888; font-style: italic; text-align: left;">
+					<div class="col-12">
+						<p style="font-size: 1.05em; color: #aaa; font-style: italic; text-align: left; max-width: 1000px; margin: 0 auto;">
 							Jarrett Arthur is one of the highest ranking female black instructors in Krav Maga in the country. For over 10 years she’s been educating and instructing men, women, and kids about the importance of practical, effective self-defense and personal safety knowledge. In 2009 she founded M.A.M.A. (Mothers Against Malicious Acts), a self-defense system designed exclusively for moms and all people responsible for the wellbeing of children. Jarrett has been featured as an expert on national television shows including Good Morning America, Ellen, Access Hollywood KCAL9, and Good Day LA, as well as in numerous online and print publications including SHAPE, Parents, Livestrong, Fitness Magazine and The New York Times.
 						</p>
 					</div>
 				</div>
-				<footer>
+				<footer style="margin-top: 3em;">
 					<ul id="copyright">
 						<li>&copy; Women's Self-Defense. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
