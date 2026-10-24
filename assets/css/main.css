@@ -84,6 +84,7 @@ input, select, textarea {
 
 	body {
 		padding-top: 3.5em;
+		zoom: 87%;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
