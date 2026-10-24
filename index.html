@@ -10,58 +10,91 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
+		<!-- Custom CSS to override template and match Google Site layout -->
+		<style>
+			/* Top Navigation Bar */
+			#nav {
+				background-color: #222; 
+				color: #fff;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 2em;
+				height: 60px;
+				position: static; 
+			}
+			#nav .brand {
+				font-size: 1.4em;
+				font-weight: 300;
+			}
+			#nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+			}
+			#nav ul li {
+				margin-left: 1.5em;
+			}
+			#nav ul li a {
+				color: #bbb;
+				text-decoration: none;
+				font-size: 0.9em;
+			}
+			#nav ul li a.active {
+				color: #5ab1d8; /* Blue active link */
+			}
+			#nav ul li a:hover {
+				color: #fff;
+			}
+
+			/* Hero Image with Text Overlay */
+			.hero-container {
+				position: relative;
+				width: 100%;
+				max-width: 1400px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.hero-container img {
+				width: 100%;
+				height: auto;
+				display: block;
+				border-radius: 0 !important; /* Removes the oval cut-out */
+			}
+			.hero-text {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: #2d5d2b; /* Dark green text */
+				font-size: 4vw; /* Responsive font size */
+				font-weight: bold;
+				line-height: 1.2;
+				width: 90%;
+				text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9); /* Ensures text readability over image */
+			}
+
+			/* Footer info text */
+			.disclaimer-text {
+				text-align: left; 
+				font-size: 0.9em; 
+				line-height: 1.6; 
+				color: #555;
+				margin-top: 1em;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Nav -->
 			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Home</a></li>
-				</ul>
-			</nav>
-
-		<!-- Home / Top -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<header>
-						<h1>Women's <strong>Self-Defense</strong></h1>
-						<p style="font-size: 1.4em; font-weight: bold; margin-top: 10px;">Basic Self-Defense Techniques for Women Featuring Jarrett Arthur</p>
-					</header>
-					
-					<div class="row aln-center">
-						<div class="col-10 col-12-medium">
-							<span class="image fit"><img src="images/various-techniques.jpg" alt="Basic Self-Defense Techniques for Women Featuring Jarrett Arthur" /></span>
-						</div>
-					</div>
-
-					<div class="row aln-center" style="margin-top: 2em;">
-						<div class="col-8 col-10-medium col-12-small">
-							<p style="text-align: center; font-size: 1.1em; line-height: 1.6;">
-								These techniques are demonstrated by Self-Defense Expert and Krav Maga Black Belt Jarrett Arthur (founder of M.A.M.A - Mothers Against Malicious Acts, founder of Jarrett Arthur Customized Self-Defense and co-founder of Jarrett and Jennie Self-Defense).
-							</p>
-						</div>
-					</div>
-				</div>
-			</article>
-
-		<!-- Footer -->
-			<article id="footer" class="wrapper style4">
-				<div class="container medium">
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Women's Self-Defense. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+				<div class="brand">Women's Self-Defense</div>
+				<ul>
+					<li><a href="#top" class="active">Home</a></li>
+					<li><a href="#situational-awareness">Situational Awareness</a></li>
+					<li><a href="#vulnerable-targets">Vulnerable Targets</a></li>
+					<li><a href="#fighting-stance">Fighting Stance</a></li>
+					<li><a href="#front-kick">Front Kick to the Groin</a></li>
+					<li><a href
