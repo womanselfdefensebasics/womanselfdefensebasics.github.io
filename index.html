@@ -12,26 +12,47 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 
 		<style>
-			/* Match the Google Sites dark navigation bar */
+			/* Override Miniport base defaults that push content off screen */
+			html, body {
+				margin: 0;
+				padding: 0;
+				background-color: #ffffff;
+				color: #333333;
+			}
+			body {
+				padding-top: 65px;
+			}
+
+			/* Remove oval/circle avatar masking everywhere */
+			#top .image,
+			.image,
+			.image img,
+			.content-block img {
+				border-radius: 0 !important;
+				box-shadow: none !important;
+			}
+
+			/* Google Sites style dark top navigation bar */
 			#nav {
-				background-color: #222222;
-				color: #ffffff;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding: 0.8em 2em;
-				position: fixed; 
+				position: fixed;
 				top: 0;
 				left: 0;
 				width: 100%;
+				height: 60px;
+				background-color: #212121 !important;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 2rem;
 				z-index: 10000;
-				box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+				box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 			}
-			#nav .site-title {
-				font-size: 1.4em;
+			#nav .site-logo {
+				font-size: 1.35rem;
 				font-weight: 300;
 				color: #ffffff;
 				letter-spacing: 0.5px;
+				white-space: nowrap;
 			}
 			#nav ul {
 				list-style: none;
@@ -39,103 +60,101 @@
 				padding: 0;
 				display: flex;
 				align-items: center;
-				gap: 1.6em;
-				flex-wrap: wrap;
+				gap: 1.5rem;
+			}
+			#nav ul li {
+				margin: 0;
+				padding: 0;
 			}
 			#nav ul li a {
-				color: #b5b5b5;
+				color: #c2c2c2 !important;
 				text-decoration: none;
-				font-size: 0.9em;
+				font-size: 0.88rem;
+				font-weight: 400;
+				padding: 6px 4px;
 				transition: color 0.2s ease;
 			}
-			#nav ul li a.active {
-				color: #4da3d4;
-			}
 			#nav ul li a:hover {
-				color: #ffffff;
+				color: #ffffff !important;
+			}
+			#nav ul li a.active {
+				color: #4da3d4 !important;
 			}
 
-			/* Page padding to offset fixed nav */
-			body { padding-top: 60px; }
+			/* Sections & layout */
+			article {
+				scroll-margin-top: 65px;
+				position: relative;
+			}
 
-			/* Prevents fixed navbar from covering section titles when you click a link */
-			article { scroll-margin-top: 80px; }
-
-			/* Content Styling */
-			.content-section {
-				text-align: left;
+			.content-block {
 				max-width: 900px;
 				margin: 0 auto;
-				padding: 2em 1.5em;
-			}
-			
-			/* Custom styling for the main Home title */
-			.home-title {
-				text-align: center;
-				color: #444;
-				font-size: 3em;
-				font-weight: 300;
-				margin-bottom: 0.2em;
-			}
-			.home-subtitle {
-				text-align: center;
-				color: #777;
-				font-size: 1.2em;
-				font-weight: bold;
-				margin-bottom: 2em;
+				padding: 2.5rem 1.5rem;
+				text-align: left;
 			}
 
-			.content-section h2 {
+			.content-block h2 {
 				text-align: center;
-				margin-bottom: 1em;
+				font-size: 2.2rem;
+				font-weight: 300;
 				color: #3b7494;
+				margin-bottom: 1.5rem;
 			}
-			.content-section p, .content-section li {
-				font-size: 1.1em;
+
+			.content-block h3 {
+				font-size: 1.3rem;
+				font-weight: 600;
+				color: #222222;
+				margin-top: 1.8rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.content-block p, 
+			.content-block li {
+				font-size: 1.05rem;
 				line-height: 1.75;
-				color: #444;
+				color: #444444;
 			}
-			.content-section ul, .content-section ol {
-				margin-bottom: 2em;
-				padding-left: 2em;
+
+			.content-block ul, 
+			.content-block ol {
+				margin: 1rem 0 2rem 1.8rem;
 			}
-			.figure-caption {
-				font-size: 0.9em;
+
+			.section-pic {
+				display: block;
+				margin: 1rem auto;
+				max-width: 100%;
+				height: auto;
+			}
+
+			.pic-caption {
+				font-size: 0.88rem;
 				font-style: italic;
 				color: #666;
 				text-align: center;
-				margin-top: 0.5em;
-				margin-bottom: 2em;
+				margin-top: 0.4rem;
+				margin-bottom: 2rem;
 			}
-			.bio-text {
-				font-style: italic;
-				font-size: 0.9em;
-				color: #555;
-				border-top: 1px solid #ddd;
-				padding-top: 1em;
-				margin-top: 3em;
+
+			/* Hero section layout */
+			.hero-container {
+				position: relative;
+				width: 100%;
+				max-width: 1200px;
+				margin: 1.5rem auto 0 auto;
+				text-align: center;
 			}
-			
-			/* Standardized Image Formatting */
-			.standard-img {
-				max-width: 100%;
+
+			.hero-container img {
+				width: 100%;
 				height: auto;
 				display: block;
-				margin: 0 auto;
-				border-radius: 0 !important;
-				box-shadow: none !important;
 			}
-		</style>
-	</head>
-	<body class="is-preload">
 
-		<!-- Top Navigation -->
-		<nav id="nav">
-			<div class="site-title">Women's Self-Defense</div>
-			<ul>
-				<li><a href="#top" class="active">Home</a></li>
-				<li><a href="#situational-awareness">Situational Awareness</a></li>
-				<li><a href="#vulnerable-targets">Vulnerable Targets</a></li>
-				<li><a href="#fighting-stance">Fighting Stance</a></li>
-				<li><a href="#front-kick">Front Kick to the Groin</a></li>
-				<li><a href
+			.hero-text-overlay {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-
